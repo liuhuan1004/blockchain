@@ -6,5 +6,9 @@ fn main() {
         sum += n;
     }
 
-    println!("Day 4: sum = {}", sum);
+    if sum > 10 {
+        println!("Day 5: sum is big: {}", sum);
+    } else {
+        println!("Day 5: sum is small: {}", sum);
+    }
 }
