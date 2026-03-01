@@ -1,18 +1,11 @@
-fn calc_sum(nums: [i32; 5]) -> i32 {
+fn main() {
+    let nums = vec![2, 4, 6, 8];
     let mut sum = 0;
-    for n in nums {
+
+    for (i, n) in nums.iter().enumerate() {
+        println!("index {} value {}", i, n);
         sum += n;
     }
-    sum
-}
 
-fn main() {
-    let nums = [1, 2, 3, 4, 5];
-    let result = calc_sum(nums);
-
-    if result % 2 == 0 {
-        println!("Day 6: sum {} is even", result);
-    } else {
-        println!("Day 6: sum {} is odd", result);
-    }
+    println!("Day 7: sum = {}", sum);
 }
