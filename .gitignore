@@ -1,0 +1,18 @@
+# 忽略单个文件
+# secret.txt
+# config.json
+
+# 忽略整个文件夹
+# /node_modules
+my_project/target
+
+# 忽略特定类型的文件
+*.log
+*.tmp
+
+# 忽略以点开头的隐藏文件夹（比如 .vscode）
+.vscode/
+
+# 忽略某个文件夹下的所有 .txt 文件，但保留特定的一个
+docs/*.txt
+!docs/important.txt   # 用 ! 取反，表示不忽略这个文件
