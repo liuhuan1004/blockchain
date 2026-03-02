@@ -1,11 +1,20 @@
-fn main() {
-    let nums = vec![2, 4, 6, 8];
-    let mut sum = 0;
+struct Wallet {
+    balance: i32,
+}
 
-    for (i, n) in nums.iter().enumerate() {
-        println!("index {} value {}", i, n);
-        sum += n;
+impl Wallet {
+    fn deposit(&mut self, amount: i32) {
+        self.balance += amount;
     }
 
-    println!("Day 7: sum = {}", sum);
+    fn withdraw(&mut self, amount: i32) {
+        self.balance -= amount;
+    }
+}
+
+fn main() {
+    let mut w = Wallet { balance: 100 };
+    w.deposit(50);
+    w.withdraw(30);
+    println!("Day 8: balance = {}", w.balance);
 }
